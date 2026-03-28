@@ -42,7 +42,7 @@ print('-=-' * 20)
 jogador = int(input('Em que número eu pensei?')) # joagador tenta adivinhar.
 
 print('PROCESSANDO...')
-sleep(2) # 2 é o tempo que vaidemorar para pensar
+sleep(2) # 2s é o tempo que vai demorar para pensar
 
 if jogador == computa:
     print('PARABÉNS! você conseguiu me vencer!')
