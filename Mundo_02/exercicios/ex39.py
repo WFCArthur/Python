@@ -8,29 +8,50 @@
 
 # Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.
 from time import sleep
-print('-=-'*13)
-print('quantos anos você vai fazer esse ano?')
-print('-=-'*13)
+from datetime import date
+print('-=-'*8)
+print('PROGRAMA DE ALISTAMENTO')
+print('-=-'*8)
 
-idade = int(input('Digite a sua idade: '))
+ano = int(input('Ano de nascimento: '))
 
-print('CARREGANDO....')
+print('-'*20)
+print('[1] para masculino')
+print('[2] Para feminino')
+print('-'*20)
+
+genero = int(input('Qual o seu gênero: '))
+
+ano_atual = date.today().year
+
+print('CARREGANDO...')
 sleep(2)
 
-ano = 2026 - idade
+print('-'*20)
+idade = ano_atual - ano
 
-if idade <= 17:
-    print(f'O ano que você nasceu é {ano}')
-    print('Você ainda não pode se alistar!')
-    print(f'Por que você não tem idade suficiente! {idade} anos')
-elif idade == 18:
-    print(f'O ano que você nasceu é {ano}')
-    print(f'Esse ano você faz {idade} anos, você já pode se alistar!')
-elif idade > 19:
-    print(f'O ano que você nasceu é {ano}')
-    print(f'Já passou do tempo de se alistar! Pois você já tem {idade} anos')
+if genero == 1:
+    if idade < 18:
+        tempo_que_falta = 18 - idade
+        ano_alistamento = ano_atual + tempo_que_falta
+
+        print('Você ainda não pode se alistar.')
+        print(f'Pois faltam {tempo_que_falta} anos e você tem {idade} anos.')
+        print(f'Você vai se alistar em {ano_alistamento}.')
+
+    elif idade == 18:
+
+        print(f'você já pode se alistar!')
+
+    else:
+        tempo_que_passou = idade - 18
+        ano_alistamento = ano_atual - tempo_que_passou
+
+        print(f'Já passou do tempo de se alistar.')
+        print(f'Você deveria ter se alistado em {ano_alistamento}.')
+        print(f'Isso foi há {tempo_que_passou} anos.')
 else:
-    print('[ERRO]')
+   print(f'Você não precisa se alistar.')
 
 print('-'*20)
 
