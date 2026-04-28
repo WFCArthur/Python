@@ -41,9 +41,6 @@ if computador == jogador:
 elif (computador == 'Pedra' and jogador == 'Papel') or (computador == 'Papel' and jogador == 'Tesoura') or (computador == 'Tesoura' and jogador == 'Pedra'):
     print('\033[1;33mVocê me venceu! PARABÉNS.\033[m')
 else:
-    print('\033[1;31mEu te venci!\033[m')
-      
-     
-    
+    print('\033[1;31mEu te venci!\033[m')    
 
 
