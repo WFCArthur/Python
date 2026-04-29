@@ -51,7 +51,7 @@ if genero == 1:
         print(f'Você deveria ter se alistado em {ano_alistamento}.')
         print(f'Isso foi há {tempo_que_passou} anos.')
 else:
-   print(f'Você não precisa se alistar.')
+    print(f'Você não precisa se alistar.')
 
 print('-'*20)
 
