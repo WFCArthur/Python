@@ -1,0 +1,17 @@
+'''Crie um programa que tenha uma tupla totalmente preenchida com uma contagem por extenso, de zero até vinte.
+Seu programa deverá ler um número pelo teclado(entre 0 e 20) e mostra-lo por extenso.'''
+while True:
+    num = int(input('Escolha um número entre 0 e 20 ou 999 para parar: '))
+    
+    if num == 999:
+        print('Programa Finalizado. Volte sempre!')
+        break
+
+    while num not in [0,1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20]:
+        num = int(input('Tente novamente. Escolha um número entre 0 e 20: '))
+
+    numeros = ('Zero','Um','Dois','Três','Quatro','Cinco','Seis','Sete','Oito','Nove', 'Dez','Onze','Doze','Treze','Quatorze','Quinze','Dezesseis','Dezessete','Dezoito','Dezenove','Vinte')
+
+    print('=-'*20)
+    print(f'Você digitou o número {numeros[num]}.')
+    print('=-'*20)

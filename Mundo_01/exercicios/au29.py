@@ -16,6 +16,6 @@ else:
 # Outro exemplo com a idade agora
 
 # if idade >= 18:
-   # print(f'Você tem {idade} anos, agora já pode ser preso!')
+# print(f'Você tem {idade} anos, agora já pode ser preso!')
 # else:
     # print(f'Você tem {idade} anos, é jovem ainda!')
